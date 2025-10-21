@@ -5,3 +5,4 @@ __pycache__/
 pip-wheel-metadata/ 
 *.dvc/ 
 *.venv/
+/models

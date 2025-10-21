@@ -1,0 +1,15 @@
+stages:
+  pipeline:
+    cmd: jupyter nbconvert --to notebook --execute notebooks/pipeline.ipynb
+    deps:
+    - data/raw
+    - notebooks/pipeline.ipynb
+    outs:
+    - data/augmented
+    - data/processed
+    - models
+    metrics:
+    - notebooks/metrics.csv:
+        cache: false
+    - notebooks/metrics_aug.csv:
+        cache: false

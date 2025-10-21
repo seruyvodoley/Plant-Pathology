@@ -1,0 +1,38 @@
+schema: '2.0'
+stages:
+  pipeline:
+    cmd: jupyter nbconvert --to notebook --execute notebooks/pipeline.ipynb
+    deps:
+    - path: data/raw
+      hash: md5
+      md5: 01efb8dd54675c14342a393cec74957e.dir
+      size: 823792065
+      nfiles: 3646
+    - path: notebooks/pipeline.ipynb
+      hash: md5
+      md5: 23f876a0ff3b993cb5049828a4571985
+      size: 24579
+    outs:
+    - path: data/augmented
+      hash: md5
+      md5: 0fd0bc50a2885a7cfba828f535435615.dir
+      size: 14319869
+      nfiles: 3642
+    - path: data/processed
+      hash: md5
+      md5: 3f9f28942b1221d581643121f5f1d16a.dir
+      size: 447566404
+      nfiles: 8
+    - path: models
+      hash: md5
+      md5: 9a2086419e580cdf7abdb777ccf2d3ce.dir
+      size: 179744200
+      nfiles: 4
+    - path: notebooks/metrics.csv
+      hash: md5
+      md5: 8cfc6412e5a887f88ae518094139f692
+      size: 112
+    - path: notebooks/metrics_aug.csv
+      hash: md5
+      md5: 135bd200ae36fc2f3572174af705647f
+      size: 124
