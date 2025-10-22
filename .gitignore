@@ -5,8 +5,5 @@ __pycache__/
 pip-wheel-metadata/ 
 *.dvc/ 
 *.venv/
-/models
 /metrics_aug.csv
 /metrics.csv
-/metrics.json
-/metrics_aug.json
