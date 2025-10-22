@@ -36,3 +36,87 @@ stages:
       hash: md5
       md5: 135bd200ae36fc2f3572174af705647f
       size: 124
+  preprocess:
+    cmd: python src/data_preprocessing.py
+    deps:
+    - path: data/raw/train.csv
+      hash: md5
+      md5: b25bf94c2c1d174c83c7b61ef5b1f9d0
+      size: 33534
+    - path: src/data_preprocessing.py
+      hash: md5
+      md5: 81c0fa0615927bb408c325b2c4a4e011
+      size: 2040
+    outs:
+    - path: data/processed
+      hash: md5
+      md5: 7c90ac30b4cee21c169a355de30a8680.dir
+      size: 447537012
+      nfiles: 6
+  augment:
+    cmd: python src/data_augmentation.py
+    deps:
+    - path: data/raw/images
+      hash: md5
+      md5: cb615a52815e68da99ced6c4d5e578b0.dir
+      size: 823687857
+      nfiles: 3642
+    - path: src/data_augmentation.py
+      hash: md5
+      md5: 73d46fd0ecb7c48f6140059809bdedd9
+      size: 2502
+    outs:
+    - path: data/augmented
+      hash: md5
+      md5: ca948003e3658a3585dca87af7150d9b.dir
+      size: 1446469002
+      nfiles: 3650
+  train:
+    cmd: python src/train_models.py
+    deps:
+    - path: data/processed
+      hash: md5
+      md5: 7c90ac30b4cee21c169a355de30a8680.dir
+      size: 447537012
+      nfiles: 6
+    - path: src/train_models.py
+      hash: md5
+      md5: f0212cbd2bd3ab8c80c54982e6bcc924
+      size: 2701
+    outs:
+    - path: metrics.json
+      hash: md5
+      md5: 0f5e8d8b4ad686026db142dd29f739b1
+      size: 117
+    - path: models/base
+      hash: md5
+      md5: 27b7b9e073f5a4b4ed04f44e3d048629.dir
+      size: 90992880
+      nfiles: 3
+  train_aug:
+    cmd: python src/train_models_augmented.py
+    deps:
+    - path: data/augmented
+      hash: md5
+      md5: ca948003e3658a3585dca87af7150d9b.dir
+      size: 1446469002
+      nfiles: 3650
+    - path: data/processed
+      hash: md5
+      md5: 7c90ac30b4cee21c169a355de30a8680.dir
+      size: 447537012
+      nfiles: 6
+    - path: src/train_models_augmented.py
+      hash: md5
+      md5: b70214bc49ea26da5da466c0d4f749c7
+      size: 3065
+    outs:
+    - path: metrics_aug.json
+      hash: md5
+      md5: db411f0bc6e5a57e7469026a24240b1f
+      size: 117
+    - path: models/augmented
+      hash: md5
+      md5: 067f4a91de54b986923481c14daaf592.dir
+      size: 92683136
+      nfiles: 3

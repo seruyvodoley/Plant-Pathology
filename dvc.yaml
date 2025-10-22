@@ -1,15 +1,37 @@
 stages:
-  pipeline:
-    cmd: jupyter nbconvert --to notebook --execute notebooks/pipeline.ipynb
+  preprocess:
+    cmd: python src/data_preprocessing.py
     deps:
-    - data/raw
-    - notebooks/pipeline.ipynb
+      - src/data_preprocessing.py
+      - data/raw/train.csv
     outs:
-    - data/augmented
-    - data/processed
-    - models
+      - data/processed
+
+  augment:
+    cmd: python src/data_augmentation.py
+    deps:
+      - src/data_augmentation.py
+      - data/raw/images
+    outs:
+      - data/augmented
+
+  train:
+    cmd: python src/train_models.py
+    deps:
+      - src/train_models.py
+      - data/processed
+    outs:
+      - models/base
     metrics:
-    - notebooks/metrics.csv:
-        cache: false
-    - notebooks/metrics_aug.csv:
-        cache: false
+      - metrics.json
+
+  train_aug:
+    cmd: python src/train_models_augmented.py
+    deps:
+      - src/train_models_augmented.py
+      - data/augmented
+      - data/processed
+    outs:
+      - models/augmented
+    metrics:
+      - metrics_aug.json

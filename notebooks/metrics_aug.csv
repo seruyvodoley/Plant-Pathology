@@ -1,0 +1,4 @@
+Model,Accuracy (Augmented)
+RandomForest,0.7566331198536139
+LogisticRegression,0.6944190301921317
+CNN,0.6904109716415405
