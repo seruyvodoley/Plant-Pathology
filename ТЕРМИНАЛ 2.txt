@@ -1,0 +1,216 @@
+Microsoft Windows [Version 10.0.26200.6901]
+(c) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.
+
+C:\Users\sb170\Desktop\основы программирования\7 семестр\методы анализа данных\работа 3>.venv/bin/activate
+".venv" не является внутренней или внешней
+командой, исполняемой программой или пакетным файлом.
+
+C:\Users\sb170\Desktop\основы программирования\7 семестр\методы анализа данных\работа 3>.venv\Scripts\activate
+
+(.venv) C:\Users\sb170\Desktop\основы программирования\7 семестр\методы анализа данных\работа 3>dvc exp run train
+Reproducing experiment 'saved-plug'
+Building workspace index                                                                   |3.66k [00:00, 26.8kentry/s]
+Comparing indexes                                                                          |3.66k [00:00, 41.1kentry/s]
+WARNING: No file hash info found for 'C:\Users\sb170\Desktop\основы программирования\7 семестр\методы анализа данных\работа 3\metrics.json'. It won't be created.
+Applying changes                                                                             |0.00 [00:00,     ?file/s]WARNING:dvc_data.index.checkout:No file hash info found for 'C:\Users\sb170\Desktop\основы программирования\7 семестр\методы анализа данных\работа 3\metrics.json'. It won't be created.
+Applying changes                                                                             |0.00 [00:00,     ?file/s]
+'data\raw.dvc' didn't change, skipping
+INFO:dvc.stage:'data\raw.dvc' didn't change, skipping
+Stage 'preprocess' didn't change, skipping
+INFO:dvc.stage:Stage 'preprocess' didn't change, skipping
+Running stage 'train':
+INFO:dvc.stage.run:Running stage 'train':
+> python src/train_models.py
+INFO:dvc.stage.run:> python src/train_models.py
+2025-10-23 01:03:06.331197: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-10-23 01:03:07.797288: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+C:\Users\sb170\Desktop\основы программирования\7 семестр\методы анализа данных\работа 3\.venv\lib\site-packages\keras\src\layers\convolutional\base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+2025-10-23 01:03:31.119350: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Epoch 1/10
+46/46 ━━━━━━━━━━━━━━━━━━━━ 5s 93ms/step - accuracy: 0.6957 - loss: 0.7187 - val_accuracy: 0.7233 - val_loss: 0.5484
+Epoch 2/10
+46/46 ━━━━━━━━━━━━━━━━━━━━ 4s 86ms/step - accuracy: 0.7205 - loss: 0.5895 - val_accuracy: 0.7534 - val_loss: 0.5432
+Epoch 3/10
+46/46 ━━━━━━━━━━━━━━━━━━━━ 4s 84ms/step - accuracy: 0.7294 - loss: 0.5680 - val_accuracy: 0.7260 - val_loss: 0.5258
+Epoch 4/10
+46/46 ━━━━━━━━━━━━━━━━━━━━ 4s 84ms/step - accuracy: 0.7651 - loss: 0.5119 - val_accuracy: 0.7452 - val_loss: 0.5125
+Epoch 5/10
+46/46 ━━━━━━━━━━━━━━━━━━━━ 4s 85ms/step - accuracy: 0.7946 - loss: 0.4429 - val_accuracy: 0.7534 - val_loss: 0.5419
+Epoch 6/10
+46/46 ━━━━━━━━━━━━━━━━━━━━ 4s 84ms/step - accuracy: 0.8489 - loss: 0.3494 - val_accuracy: 0.7534 - val_loss: 0.5702
+Epoch 7/10
+46/46 ━━━━━━━━━━━━━━━━━━━━ 4s 84ms/step - accuracy: 0.8908 - loss: 0.2653 - val_accuracy: 0.7014 - val_loss: 0.6622
+Epoch 8/10
+46/46 ━━━━━━━━━━━━━━━━━━━━ 4s 85ms/step - accuracy: 0.9162 - loss: 0.2045 - val_accuracy: 0.6822 - val_loss: 0.7329
+Epoch 9/10
+46/46 ━━━━━━━━━━━━━━━━━━━━ 4s 84ms/step - accuracy: 0.9327 - loss: 0.1783 - val_accuracy: 0.7589 - val_loss: 0.7146
+Epoch 10/10
+46/46 ━━━━━━━━━━━━━━━━━━━━ 4s 85ms/step - accuracy: 0.9499 - loss: 0.1348 - val_accuracy: 0.7123 - val_loss: 0.8754
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Updating lock file 'dvc.lock'
+INFO:dvc.dvcfile:Updating lock file 'dvc.lock'
+
+Ran experiment(s): saved-plug
+Experiment results have been applied to your workspace.
+
+(.venv) C:\Users\sb170\Desktop\основы программирования\7 семестр\методы анализа данных\работа 3>dvc exp show
+WARNING: Unable to find `less` in the PATH. Check out <https://man.dvc.org/pipeline/show> for more info.
+ ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  Experiment                 Created        RandomForest   LogisticRegression       CNN   train.img_height   train.img_width   train.batch_size   train.epochs   train.learning_rate   train.test_size   train.num_classes   train.random_state   data\augmented                         data\processed                         data\raw                               data\raw\images                        data\raw\train.csv               notebooks\pipeline.ipynb           src\data_augmentation.py           src\data_preprocessing.py          src\train_models.py                src\train_models_augmented.py
+ ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  workspace                  -                   0.76164              0.66027   0.71233   128                128               -                  10             0.001                 0.2               2            42                   acc1beb13ae5ef210c9d884500372437.dir   6033bcbb80fdb834c6f321a7a4407451.dir   -                                      cb615a52815e68da99ced6c4d5e578b0.dir   b25bf94c2c1d174c83c7b61ef5b1f9d0   -                                  73d46fd0ecb7c48f6140059809bdedd9   81c0fa0615927bb408c325b2c4a4e011   f0212cbd2bd3ab8c80c54982e6bcc924   8448e53ad32e97edd2f8beb100b92fc9
+  main                       Oct 21, 2025              -                    -         -   -                  -                 -                  -              -                     -                 -            -                    -                                      -                                      01efb8dd54675c14342a393cec74957e.dir   -                                      -               23f876a0ff3b993cb5049828a4571985   -                                  -                                  -                                  -
+  ├── ab62d0a [saved-plug]   01:04 AM            0.76164              0.66027   0.71233   -                  -                 -                  -              -                     -                 -            -                    acc1beb13ae5ef210c9d884500372437.dir   6033bcbb80fdb834c6f321a7a4407451.dir   -                                      cb615a52815e68da99ced6c4d5e578b0.dir   b25bf94c2c1d174c83c7b61ef5b1f9d0   -                                  73d46fd0ecb7c48f6140059809bdedd9   81c0fa0615927bb408c325b2c4a4e011   f0212cbd2bd3ab8c80c54982e6bcc924   8448e53ad32e97edd2f8beb100b92fc9
+  ├── 1da6064 [alive-dees]   12:53 AM                  -                    -         -   -                  -                 -                  -              -                     -                 -            -                    acc1beb13ae5ef210c9d884500372437.dir   6033bcbb80fdb834c6f321a7a4407451.dir   -                                      cb615a52815e68da99ced6c4d5e578b0.dir   b25bf94c2c1d174c83c7b61ef5b1f9d0   -                                  73d46fd0ecb7c48f6140059809bdedd9   81c0fa0615927bb408c325b2c4a4e011   6573c1b41122d81b91b100b3aacbb3bd   8448e53ad32e97edd2f8beb100b92fc9
+  ├── 1c51173 [grade-vang]   12:49 AM                  -                    -         -   -                  -                 -                  -              -                     -                 -            -                    acc1beb13ae5ef210c9d884500372437.dir   6033bcbb80fdb834c6f321a7a4407451.dir   -                                      cb615a52815e68da99ced6c4d5e578b0.dir   b25bf94c2c1d174c83c7b61ef5b1f9d0   -                                  73d46fd0ecb7c48f6140059809bdedd9   81c0fa0615927bb408c325b2c4a4e011   6573c1b41122d81b91b100b3aacbb3bd   80903827d063f22fe7bb1ea204803ee5
+  ├── 07d30c9 [salic-hips]   12:46 AM                  -                    -         -   -                  -                 -                  -              -                     -                 -            -                    acc1beb13ae5ef210c9d884500372437.dir   6033bcbb80fdb834c6f321a7a4407451.dir   -                                      cb615a52815e68da99ced6c4d5e578b0.dir   b25bf94c2c1d174c83c7b61ef5b1f9d0   -                                  73d46fd0ecb7c48f6140059809bdedd9   81c0fa0615927bb408c325b2c4a4e011   0bf859a4db9ee4114180ba4149d141c6   80903827d063f22fe7bb1ea204803ee5
+  ├── 703ea7c [brash-tamp]   12:46 AM                  -                    -         -   -                  -                 -                  -              -                     -                 -            -                    acc1beb13ae5ef210c9d884500372437.dir   6033bcbb80fdb834c6f321a7a4407451.dir   -                                      cb615a52815e68da99ced6c4d5e578b0.dir   b25bf94c2c1d174c83c7b61ef5b1f9d0   -                                  73d46fd0ecb7c48f6140059809bdedd9   81c0fa0615927bb408c325b2c4a4e011   0bf859a4db9ee4114180ba4149d141c6   80903827d063f22fe7bb1ea204803ee5
+  ├── 077d68f [losel-prep]   12:44 AM                  -                    -         -   -                  -                 -                  -              -                     -                 -            -                    acc1beb13ae5ef210c9d884500372437.dir   6033bcbb80fdb834c6f321a7a4407451.dir   -                                      cb615a52815e68da99ced6c4d5e578b0.dir   b25bf94c2c1d174c83c7b61ef5b1f9d0   -                                  73d46fd0ecb7c48f6140059809bdedd9   81c0fa0615927bb408c325b2c4a4e011   0bf859a4db9ee4114180ba4149d141c6   80903827d063f22fe7bb1ea204803ee5
+  ├── c54cdb5 [tight-tils]   12:44 AM                  -                    -         -   -                  -                 -                  -              -                     -                 -            -                    acc1beb13ae5ef210c9d884500372437.dir   6033bcbb80fdb834c6f321a7a4407451.dir   -                                      cb615a52815e68da99ced6c4d5e578b0.dir   b25bf94c2c1d174c83c7b61ef5b1f9d0   -                                  73d46fd0ecb7c48f6140059809bdedd9   81c0fa0615927bb408c325b2c4a4e011   0bf859a4db9ee4114180ba4149d141c6   80903827d063f22fe7bb1ea204803ee5
+  ├── 394d5fb [fancy-outs]   12:40 AM                  -                    -         -   -                  -                 -                  -              -                     -                 -            -                    acc1beb13ae5ef210c9d884500372437.dir   6033bcbb80fdb834c6f321a7a4407451.dir   -                                      cb615a52815e68da99ced6c4d5e578b0.dir   b25bf94c2c1d174c83c7b61ef5b1f9d0   -                                  73d46fd0ecb7c48f6140059809bdedd9   81c0fa0615927bb408c325b2c4a4e011   0bf859a4db9ee4114180ba4149d141c6   80903827d063f22fe7bb1ea204803ee5
+  ├── e2b919f [tamer-lama]   12:39 AM                  -                    -         -   -                  -                 -                  -              -                     -                 -            -                    acc1beb13ae5ef210c9d884500372437.dir   6033bcbb80fdb834c6f321a7a4407451.dir   -                                      cb615a52815e68da99ced6c4d5e578b0.dir   b25bf94c2c1d174c83c7b61ef5b1f9d0   -                                  73d46fd0ecb7c48f6140059809bdedd9   81c0fa0615927bb408c325b2c4a4e011   0bf859a4db9ee4114180ba4149d141c6   80903827d063f22fe7bb1ea204803ee5
+  └── 67e1b2b [found-chad]   12:33 AM                  -                    -         -   -                  -                 -                  -              -                     -                 -            -                    acc1beb13ae5ef210c9d884500372437.dir   6033bcbb80fdb834c6f321a7a4407451.dir   -                                      cb615a52815e68da99ced6c4d5e578b0.dir   b25bf94c2c1d174c83c7b61ef5b1f9d0   -                                  73d46fd0ecb7c48f6140059809bdedd9   81c0fa0615927bb408c325b2c4a4e011   0bf859a4db9ee4114180ba4149d141c6   80903827d063f22fe7bb1ea204803ee5
+ ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+(.venv) C:\Users\sb170\Desktop\основы программирования\7 семестр\методы анализа данных\работа 3>dvc exp show --sort-by train.metrics:Accuracy
+ERROR: Unknown sort column 'train.metrics:Accuracy'
+
+(.venv) C:\Users\sb170\Desktop\основы программирования\7 семестр\методы анализа данных\работа 3>dvc exp show --sort-by CNN
+WARNING: Unable to find `less` in the PATH. Check out <https://man.dvc.org/pipeline/show> for more info.
+ ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  Experiment                 Created        RandomForest   LogisticRegression       CNN   train.img_height   train.img_width   train.batch_size   train.epochs   train.learning_rate   train.test_size   train.num_classes   train.random_state   data\augmented                         data\processed                         data\raw                               data\raw\images                        data\raw\train.csv               notebooks\pipeline.ipynb           src\data_augmentation.py           src\data_preprocessing.py          src\train_models.py                src\train_models_augmented.py
+ ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  workspace                  -                   0.76164              0.66027   0.71233   128                128               -                  10             0.001                 0.2               2            42                   acc1beb13ae5ef210c9d884500372437.dir   6033bcbb80fdb834c6f321a7a4407451.dir   -                                      cb615a52815e68da99ced6c4d5e578b0.dir   b25bf94c2c1d174c83c7b61ef5b1f9d0   -                                  73d46fd0ecb7c48f6140059809bdedd9   81c0fa0615927bb408c325b2c4a4e011   f0212cbd2bd3ab8c80c54982e6bcc924   8448e53ad32e97edd2f8beb100b92fc9
+  main                       Oct 21, 2025              -                    -         -   -                  -                 -                  -              -                     -                 -            -                    -                                      -                                      01efb8dd54675c14342a393cec74957e.dir   -                                      -               23f876a0ff3b993cb5049828a4571985   -                                  -                                  -                                  -
+  ├── ab62d0a [saved-plug]   01:04 AM            0.76164              0.66027   0.71233   -                  -                 -                  -              -                     -                 -            -                    acc1beb13ae5ef210c9d884500372437.dir   6033bcbb80fdb834c6f321a7a4407451.dir   -                                      cb615a52815e68da99ced6c4d5e578b0.dir   b25bf94c2c1d174c83c7b61ef5b1f9d0   -                                  73d46fd0ecb7c48f6140059809bdedd9   81c0fa0615927bb408c325b2c4a4e011   f0212cbd2bd3ab8c80c54982e6bcc924   8448e53ad32e97edd2f8beb100b92fc9
+  ├── 1da6064 [alive-dees]   12:53 AM                  -                    -         -   -                  -                 -                  -              -                     -                 -            -                    acc1beb13ae5ef210c9d884500372437.dir   6033bcbb80fdb834c6f321a7a4407451.dir   -                                      cb615a52815e68da99ced6c4d5e578b0.dir   b25bf94c2c1d174c83c7b61ef5b1f9d0   -                                  73d46fd0ecb7c48f6140059809bdedd9   81c0fa0615927bb408c325b2c4a4e011   6573c1b41122d81b91b100b3aacbb3bd   8448e53ad32e97edd2f8beb100b92fc9
+  ├── 1c51173 [grade-vang]   12:49 AM                  -                    -         -   -                  -                 -                  -              -                     -                 -            -                    acc1beb13ae5ef210c9d884500372437.dir   6033bcbb80fdb834c6f321a7a4407451.dir   -                                      cb615a52815e68da99ced6c4d5e578b0.dir   b25bf94c2c1d174c83c7b61ef5b1f9d0   -                                  73d46fd0ecb7c48f6140059809bdedd9   81c0fa0615927bb408c325b2c4a4e011   6573c1b41122d81b91b100b3aacbb3bd   80903827d063f22fe7bb1ea204803ee5
+  ├── 07d30c9 [salic-hips]   12:46 AM                  -                    -         -   -                  -                 -                  -              -                     -                 -            -                    acc1beb13ae5ef210c9d884500372437.dir   6033bcbb80fdb834c6f321a7a4407451.dir   -                                      cb615a52815e68da99ced6c4d5e578b0.dir   b25bf94c2c1d174c83c7b61ef5b1f9d0   -                                  73d46fd0ecb7c48f6140059809bdedd9   81c0fa0615927bb408c325b2c4a4e011   0bf859a4db9ee4114180ba4149d141c6   80903827d063f22fe7bb1ea204803ee5
+  ├── 703ea7c [brash-tamp]   12:46 AM                  -                    -         -   -                  -                 -                  -              -                     -                 -            -                    acc1beb13ae5ef210c9d884500372437.dir   6033bcbb80fdb834c6f321a7a4407451.dir   -                                      cb615a52815e68da99ced6c4d5e578b0.dir   b25bf94c2c1d174c83c7b61ef5b1f9d0   -                                  73d46fd0ecb7c48f6140059809bdedd9   81c0fa0615927bb408c325b2c4a4e011   0bf859a4db9ee4114180ba4149d141c6   80903827d063f22fe7bb1ea204803ee5
+  ├── 077d68f [losel-prep]   12:44 AM                  -                    -         -   -                  -                 -                  -              -                     -                 -            -                    acc1beb13ae5ef210c9d884500372437.dir   6033bcbb80fdb834c6f321a7a4407451.dir   -                                      cb615a52815e68da99ced6c4d5e578b0.dir   b25bf94c2c1d174c83c7b61ef5b1f9d0   -                                  73d46fd0ecb7c48f6140059809bdedd9   81c0fa0615927bb408c325b2c4a4e011   0bf859a4db9ee4114180ba4149d141c6   80903827d063f22fe7bb1ea204803ee5
+  ├── c54cdb5 [tight-tils]   12:44 AM                  -                    -         -   -                  -                 -                  -              -                     -                 -            -                    acc1beb13ae5ef210c9d884500372437.dir   6033bcbb80fdb834c6f321a7a4407451.dir   -                                      cb615a52815e68da99ced6c4d5e578b0.dir   b25bf94c2c1d174c83c7b61ef5b1f9d0   -                                  73d46fd0ecb7c48f6140059809bdedd9   81c0fa0615927bb408c325b2c4a4e011   0bf859a4db9ee4114180ba4149d141c6   80903827d063f22fe7bb1ea204803ee5
+  ├── 394d5fb [fancy-outs]   12:40 AM                  -                    -         -   -                  -                 -                  -              -                     -                 -            -                    acc1beb13ae5ef210c9d884500372437.dir   6033bcbb80fdb834c6f321a7a4407451.dir   -                                      cb615a52815e68da99ced6c4d5e578b0.dir   b25bf94c2c1d174c83c7b61ef5b1f9d0   -                                  73d46fd0ecb7c48f6140059809bdedd9   81c0fa0615927bb408c325b2c4a4e011   0bf859a4db9ee4114180ba4149d141c6   80903827d063f22fe7bb1ea204803ee5
+  ├── e2b919f [tamer-lama]   12:39 AM                  -                    -         -   -                  -                 -                  -              -                     -                 -            -                    acc1beb13ae5ef210c9d884500372437.dir   6033bcbb80fdb834c6f321a7a4407451.dir   -                                      cb615a52815e68da99ced6c4d5e578b0.dir   b25bf94c2c1d174c83c7b61ef5b1f9d0   -                                  73d46fd0ecb7c48f6140059809bdedd9   81c0fa0615927bb408c325b2c4a4e011   0bf859a4db9ee4114180ba4149d141c6   80903827d063f22fe7bb1ea204803ee5
+  └── 67e1b2b [found-chad]   12:33 AM                  -                    -         -   -                  -                 -                  -              -                     -                 -            -                    acc1beb13ae5ef210c9d884500372437.dir   6033bcbb80fdb834c6f321a7a4407451.dir   -                                      cb615a52815e68da99ced6c4d5e578b0.dir   b25bf94c2c1d174c83c7b61ef5b1f9d0   -                                  73d46fd0ecb7c48f6140059809bdedd9   81c0fa0615927bb408c325b2c4a4e011   0bf859a4db9ee4114180ba4149d141c6   80903827d063f22fe7bb1ea204803ee5
+ ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+(.venv) C:\Users\sb170\Desktop\основы программирования\7 семестр\методы анализа данных\работа 3>dvc exp show --sort-by accuracy
+ERROR: Unknown sort column 'accuracy'
+
+(.venv) C:\Users\sb170\Desktop\основы программирования\7 семестр\методы анализа данных\работа 3>dvc exp run train_aug
+Reproducing experiment 'pedal-matt'
+Building workspace index                                                                                                                          |7.32k [00:03, 1.96kentry/s]
+Comparing indexes                                                                                                                                 |7.32k [00:00, 60.8kentry/s]
+WARNING: No file hash info found for 'C:\Users\sb170\Desktop\основы программирования\7 семестр\методы анализа данных\работа 3\metrics_aug.json'. It won't be created.
+Applying changes                                                                                                                                    |0.00 [00:00,     ?file/s]WARNING:dvc_data.index.checkout:Nofile hash info found for 'C:\Users\sb170\Desktop\основы программирования\7 семестр\методы анализа данных\работа 3\metrics_aug.json'. It won't be created.
+Applying changes                                                                                                                                    |0.00 [00:00,     ?file/s]
+'data\raw.dvc' didn't change, skipping
+INFO:dvc.stage:'data\raw.dvc' didn't change, skipping
+Stage 'preprocess' didn't change, skipping
+INFO:dvc.stage:Stage 'preprocess' didn't change, skipping
+Running stage 'augment':
+INFO:dvc.stage.run:Running stage 'augment':
+> python src/data_augmentation.py
+INFO:dvc.stage.run:> python src/data_augmentation.py
+2025-10-23 01:06:55.075140: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-10-23 01:06:56.362491: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1821/1821 [00:26<00:00, 69.49it/s]
+Augmentation complete. Saved 3642 images and train/test splits.
+Updating lock file 'dvc.lock'
+INFO:dvc.dvcfile:Updating lock file 'dvc.lock'
+
+INFO:dvc.repo.reproduce:
+Running stage 'train_aug':
+INFO:dvc.stage.run:Running stage 'train_aug':
+> python src/train_models_augmented.py
+INFO:dvc.stage.run:> python src/train_models_augmented.py
+2025-10-23 01:08:28.546054: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-10-23 01:08:30.759870: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+C:\Users\sb170\Desktop\основы программирования\7 семестр\методы анализа данных\работа 3\.venv\lib\site-packages\keras\src\layers\convolutional\base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+2025-10-23 01:10:05.731961: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Epoch 1/10
+92/92 ━━━━━━━━━━━━━━━━━━━━ 9s 91ms/step - accuracy: 0.7061 - loss: 0.6287 - val_accuracy: 0.7092 - val_loss: 0.5723
+Epoch 2/10
+92/92 ━━━━━━━━━━━━━━━━━━━━ 8s 89ms/step - accuracy: 0.7199 - loss: 0.5766 - val_accuracy: 0.7092 - val_loss: 0.5980
+Epoch 3/10
+92/92 ━━━━━━━━━━━━━━━━━━━━ 8s 90ms/step - accuracy: 0.7250 - loss: 0.5554 - val_accuracy: 0.7106 - val_loss: 0.5531
+Epoch 4/10
+92/92 ━━━━━━━━━━━━━━━━━━━━ 8s 85ms/step - accuracy: 0.7463 - loss: 0.5230 - val_accuracy: 0.7133 - val_loss: 0.6119
+Epoch 5/10
+92/92 ━━━━━━━━━━━━━━━━━━━━ 8s 84ms/step - accuracy: 0.7758 - loss: 0.4754 - val_accuracy: 0.7298 - val_loss: 0.5588
+Epoch 6/10
+92/92 ━━━━━━━━━━━━━━━━━━━━ 8s 84ms/step - accuracy: 0.8249 - loss: 0.3981 - val_accuracy: 0.7407 - val_loss: 0.5537
+Epoch 7/10
+92/92 ━━━━━━━━━━━━━━━━━━━━ 8s 84ms/step - accuracy: 0.8617 - loss: 0.3146 - val_accuracy: 0.7366 - val_loss: 0.6070
+Epoch 8/10
+92/92 ━━━━━━━━━━━━━━━━━━━━ 8s 83ms/step - accuracy: 0.8953 - loss: 0.2553 - val_accuracy: 0.6351 - val_loss: 0.7123
+Epoch 9/10
+92/92 ━━━━━━━━━━━━━━━━━━━━ 8s 85ms/step - accuracy: 0.8754 - loss: 0.2918 - val_accuracy: 0.7174 - val_loss: 0.6727
+Epoch 10/10
+92/92 ━━━━━━━━━━━━━━━━━━━━ 8s 90ms/step - accuracy: 0.9379 - loss: 0.1657 - val_accuracy: 0.7421 - val_loss: 0.8377
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Updating lock file 'dvc.lock'
+INFO:dvc.dvcfile:Updating lock file 'dvc.lock'
+
+Ran experiment(s): pedal-matt
+Experiment results have been applied to your workspace.
+
+(.venv) C:\Users\sb170\Desktop\основы программирования\7 семестр\методы анализа данных\работа 3>git add .
+warning: in the working copy of 'notebooks/pipeline.ipynb', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'pipeline.ipynb', LF will be replaced by CRLF the next time Git touches it
+
+(.venv) C:\Users\sb170\Desktop\основы программирования\7 семестр\методы анализа данных\работа 3>git commit -m "added new files and improved pipeline"
+Auto packing the repository in background for optimum performance.
+See "git help gc" for manual housekeeping.
+warning: The last gc run reported the following. Please correct the root cause
+and remove .git/gc.log
+Automatic cleanup will not be performed until the file is removed.
+
+Auto GC failed: [WinError 5] ╨Ю╤В╨║╨░╨╖╨░╨╜╨╛ ╨▓ ╨┤╨╛╤Б╤В╤Г╨┐╨╡: 'C:\\Users\\sb170\\Desktop\\╨╛╤Б╨╜╨╛╨▓╤Л ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╨╕╤А╨╛╨▓╨░╨╜╨╕╤П\\7 ╤Б╨╡╨╝╨╡╤Б╤В╤А\\╨╝╨╡╤В╨╛╨┤╤Л ╨░╨╜╨░╨╗╨╕╨╖╨░ ╨┤╨░╨╜╨╜╤Л╤Е\\╤А╨░╨▒╨╛╤В╨░ 3\\.git\\objects\\e4\\a10786c51689c3766d2cf2bb1f03368d71b7b1'
+
+[main 4c8fd941] added new files and improved pipeline
+ 16 files changed, 33635 insertions(+), 11 deletions(-)
+ rename {src => notebooks}/.gitkeep (100%)
+ create mode 100644 notebooks/metrics.csv
+ create mode 100644 notebooks/metrics_aug.csv
+ create mode 100644 notebooks/pipeline.ipynb
+ create mode 100644 notebooks/pipeline.nbconvert.ipynb
+ create mode 100644 params.yaml
+ create mode 100644 pipeline.ipynb
+ create mode 100644 src/data_augmentation.py
+ create mode 100644 src/data_preprocessing.py
+ create mode 100644 src/train_models.py
+ create mode 100644 src/train_models_augmented.py
+ create mode 100644 "\320\242\320\225\320\240\320\234\320\230\320\235\320\220\320\233.txt"
+
+(.venv) C:\Users\sb170\Desktop\основы программирования\7 семестр\методы анализа данных\работа 3>git push
+Enumerating objects: 27, done.
+Counting objects: 100% (27/27), done.
+Delta compression using up to 20 threads
+Compressing objects: 100% (19/19), done.
+Writing objects: 100% (20/20), 151.91 KiB | 726.00 KiB/s, done.
+Total 20 (delta 1), reused 2 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), done.
+To github.com:seruyvodoley/Plant-Pathology.git
+   aa8ffab7..4c8fd941  main -> main
+
+(.venv) C:\Users\sb170\Desktop\основы программирования\7 семестр\методы анализа данных\работа 3>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+(.venv) C:\Users\sb170\Desktop\основы программирования\7 семестр\методы анализа данных\работа 3>dvc exp show --sort-by CNN
+WARNING: Unable to find `less` in the PATH. Check out <https://man.dvc.org/pipeline/show> for more info.
+ ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  Experiment   Created    metrics.json:RandomForest   metrics.json:LogisticRegression   metrics.json:CNN   metrics_aug.json:RandomForest   metrics_aug.json:LogisticRegression   metrics_aug.json:CNN   train.img_height   train.img_width   train.batch_size   train.epochs   train.learning_rate   train.test_size   train.num_classes   train.random_state   data\augmented                         data\processed            data\raw\images                        data\raw\train.csv                 src\data_augmentation.py           src\data_preprocessing.py          src\train_models.py                src\train_models_augmented.py
+ ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  workspace    -                            0.76164                           0.66027            0.71233                         0.74074                               0.67627                0.74211   128          128               -                  10             0.001                 0.2               2                   42                   ca948003e3658a3585dca87af7150d9b.dir   7c90ac30b4cee21c169a355de30a8680.dir   cb615a52815e68da99ced6c4d5e578b0.dir   b25bf94c2c1d174c83c7b61ef5b1f9d0   73d46fd0ecb7c48f6140059809bdedd9   81c0fa0615927bb408c325b2c4a4e011   f0212cbd2bd3ab8c80c54982e6bcc924   b70214bc49ea26da5da466c0d4f749c7
+  main         01:12 AM                     0.76164                           0.66027            0.71233                         0.74074                               0.67627                0.74211   128          128               -                  10             0.001                 0.2               2                   42                   ca948003e3658a3585dca87af7150d9b.dir   7c90ac30b4cee21c169a355de30a8680.dir   cb615a52815e68da99ced6c4d5e578b0.dir   b25bf94c2c1d174c83c7b61ef5b1f9d0   73d46fd0ecb7c48f6140059809bdedd9   81c0fa0615927bb408c325b2c4a4e011   f0212cbd2bd3ab8c80c54982e6bcc924   b70214bc49ea26da5da466c0d4f749c7
+ ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+(.venv) C:\Users\sb170\Desktop\основы программирования\7 семестр\методы анализа данных\работа 3>
